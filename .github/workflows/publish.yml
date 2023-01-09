@@ -17,9 +17,4 @@ jobs:
           node-version: "12.x"
       - run: npm install
       - run: npm run build
-      - name: Publish to npm
-        uses: actions/npm@v1
-        with:
-          args: publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
