@@ -11,13 +11,18 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
+        with:
+          timezone: America/Sao_Paulo
+
       - name: Setup repo
-        - uses: actions/checkout@v3
-        
+        uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: "16.x"
 
       - name: Install Packages
         run: npm install
