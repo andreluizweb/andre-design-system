@@ -1,12 +1,12 @@
 {
   "name": "andre-design-system",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "build-storybook -o design-system"
   },
   "repository": {
     "type": "git",
