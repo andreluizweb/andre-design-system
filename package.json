@@ -1,12 +1,16 @@
 {
   "name": "andre-design-system",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -m es6 --outDir esm",
+    "clean": "del lib/* && del esm/*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build": "build-storybook -o design-system"
+    "storybook:build": "build-storybook -o design-system"
   },
   "repository": {
     "type": "git",
@@ -33,6 +37,8 @@
     "@storybook/builder-webpack4": "^6.5.15",
     "@storybook/manager-webpack4": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.3.0"
+    "@types/react": "^18.0.26",
+    "babel-loader": "^8.3.0",
+    "del-cli": "^5.0.0"
   }
 }
