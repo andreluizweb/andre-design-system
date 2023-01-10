@@ -1,3 +1,10 @@
-node_modules/
-dist/
 .env
+
+.idea
+.vscode
+
+coverage
+design-system
+esm
+lib
+node_modules/
